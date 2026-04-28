@@ -159,7 +159,7 @@ import { PlantService } from '../../services/plant.service';
               <div class="c-icon email"><ion-icon name="mail-outline"></ion-icon></div>
               <div class="c-text">
                 <span class="c-label">Email</span>
-                <span class="c-value">fatih&#64;kebunku.app</span>
+                <span class="c-value">fatihikhsan098&#64;gmail.com</span>
               </div>
               <ion-icon name="chevron-forward-outline" class="c-arrow"></ion-icon>
             </a>
@@ -167,7 +167,7 @@ import { PlantService } from '../../services/plant.service';
               <div class="c-icon insta"><ion-icon name="logo-instagram"></ion-icon></div>
               <div class="c-text">
                 <span class="c-label">Instagram</span>
-                <span class="c-value">&#64;fatihikhsanpradana</span>
+                <span class="c-value">&#64;upinipinikhsan</span>
               </div>
               <ion-icon name="chevron-forward-outline" class="c-arrow"></ion-icon>
             </a>
