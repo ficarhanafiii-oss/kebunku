@@ -47,9 +47,12 @@ jobs:
 
       - name: Set targetSdkVersion to 35
         run: |
+          cat android/variables.gradle
           sed -i 's/targetSdkVersion = .*/targetSdkVersion = 35/' android/variables.gradle
           sed -i 's/compileSdkVersion = .*/compileSdkVersion = 35/' android/variables.gradle
+          sed -i 's/versionCode [0-9]*/versionCode 2/' android/app/build.gradle
           cat android/variables.gradle
+          grep versionCode android/app/build.gradle
 
       - name: Install Python image tools for icon resizing
         run: pip install Pillow
@@ -111,4 +114,3 @@ jobs:
           name: kebunku-release-signed.aab
           path: ${{ steps.sign_aab.outputs.signedReleaseFile }}
           retention-days: 30
-          
