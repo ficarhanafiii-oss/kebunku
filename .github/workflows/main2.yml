@@ -45,6 +45,12 @@ jobs:
       - name: Capacitor sync Android
         run: npx cap sync android
 
+      - name: Set targetSdkVersion to 35
+        run: |
+          sed -i 's/targetSdkVersion = .*/targetSdkVersion = 35/' android/variables.gradle
+          sed -i 's/compileSdkVersion = .*/compileSdkVersion = 35/' android/variables.gradle
+          cat android/variables.gradle
+
       - name: Install Python image tools for icon resizing
         run: pip install Pillow
 
@@ -105,3 +111,4 @@ jobs:
           name: kebunku-release-signed.aab
           path: ${{ steps.sign_aab.outputs.signedReleaseFile }}
           retention-days: 30
+          
